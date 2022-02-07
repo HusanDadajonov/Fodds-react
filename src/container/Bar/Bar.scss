@@ -1,0 +1,101 @@
+.bar{
+    width: 104px;
+    padding: 24px;
+    height: 100vh;
+    background: #1f1d2b;
+    border-radius: 0 16px 16px 0;
+
+    &__btn{
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: none;
+        border: none;
+        z-index: 3;
+    }
+
+
+    &__item{
+
+        *{
+            pointer-events: none;
+        }
+        cursor: pointer;
+        width: 56px;
+        height: 56px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: transparent;
+        box-shadow: transparent;
+        border-radius: 8px;
+        position:relative;
+
+        &::before{
+            content: "";
+            position:absolute;
+            width: 104px;
+            height: 80px;
+            background: transparent;
+            border-radius: 12px 0px 0px 12px;
+            z-index: 1;
+            transform: translateX(12px);
+        }
+
+        &::after{
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            border-radius: 8px; 
+            box-shadow: transparent;
+            transition: all 0.4s ease;
+            z-index: 2;
+        }
+
+        &:hover{
+            &::after{
+                background: #ea7c69;
+                box-shadow: 0px 8px 24px rgba(234, 124, 105, 0.32);
+            }
+            
+            & svg,
+            & path{
+                fill: #fff !important;
+            }
+        }
+
+        &:nth-child(1){
+            background: #543c3b;
+
+            & path{
+                fill: linear-gradient(180deg, #EA9769 0%, #EA6969 100%);;
+            }
+        }
+
+        &:not(:last-child){
+            margin-bottom: 37px;
+        }
+    }
+
+    &__item--active{
+        &::before{
+            background: #252836;
+        }
+        &::after{
+            background: #ea7c69;
+            box-shadow: 0px 8px 24px rgba(234, 124, 105, 0.32);
+        }
+      
+
+        & svg,
+        & path{
+            fill: #fff !important;
+        }
+
+    }
+}
