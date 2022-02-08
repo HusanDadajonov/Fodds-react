@@ -8,7 +8,7 @@ import { dessert } from "../../Api/Dishes"
 import Card from "../../components/Card/Card"
 import { useState } from "react"
 
-function Cards({food,search,setcheckResult,checkResult,setSearch}){
+function Cards({food,search,setcheckResult,checkResult,setSearch,setDelivery}){
     
     let filtre = []
     if(food == "hot" && search.length != 0)filtre = hotDishes.filter(item => item.foodName.toLowerCase().includes(search.toLowerCase()))
@@ -20,14 +20,17 @@ function Cards({food,search,setcheckResult,checkResult,setSearch}){
     
     if(filtre.length == 0 && search.length != 0)setcheckResult(true)
     if(filtre.length != 0)setcheckResult(false)
+
+    
+
     return(
         <section className="cards">
             <div className="cards__header">
                 <h2 className="cards__title">Choose Dishes</h2>
-                <select className="cards__select">
-                    <option className="cagit config --global user.name muhammadjewel --replace-allrds__option" value="1">Dine in</option>
-                    <option className="cards__option" value="2">fast food</option>
-                    <option className="cards__option" value="3">easy food</option>
+                <select className="cards__select" onChange={(e)=> setDelivery(e.target.value)}>
+                    <option className="cards__option" value="1">Dine in</option>
+                    <option className="cards__option" value="2">To Go</option>
+                    <option className="cards__option" value="3">Delivery</option>
                 </select>
             </div>
             <ul className="cards__list">

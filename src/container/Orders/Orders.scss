@@ -1,0 +1,47 @@
+.orders{
+    background:#1f1d2b;
+    height: 100vh;
+    padding: 24px;
+
+    &__list{
+        display: flex;
+        align-items: center;
+        padding: 0 ;
+        margin: 0;
+        list-style: none;
+    }
+
+    &__item{
+        &:not(:last-child){
+            margin-right: 10px;
+        }
+    }
+
+    &__total{
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 140%;
+        margin-bottom: 24px;
+        color: #fff;
+    }
+    
+
+    &__btn{
+        padding: 7px 12px;
+        background: transparent;
+        border: 1px solid #393c49;
+        box-sizing: border-box;
+        border-radius: 8px;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 140%;
+        color: #ea7c69;
+        transition: all 0.4s ease;
+    }
+
+    &__item--active button{
+        background: #ea7c69;
+        color: #fff;
+        border-color: #ea7c69;
+    }   
+}

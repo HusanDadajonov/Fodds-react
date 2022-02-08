@@ -11,7 +11,7 @@
     &__list{
         height: 450px;
         display: grid;
-        grid-template-columns: repeat(3,auto);
+        grid-template-columns: repeat(4,auto);
         grid-column-gap: 28px;
         grid-row-gap: 85px;
         padding: 60px 0 0 0 ;
@@ -61,7 +61,7 @@
 
     &__no-result{
         position:absolute;
-        transform: translate(270px,150px);
+        transform: translate(410px,80px);
         z-index: 100;
         color: red;
         display: inline-block;
