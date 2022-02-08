@@ -15,7 +15,7 @@ function Bar(){
     return(
         <div className="bar">
             <ul className="bar__list list-unstyled">
-                <li id={1} onClick={(e)=> setActiveItem(e.target.id)} className={activeItem == 1 ?  `bar__item bar__item--active` : `bar__item`} >
+                <li id={1} onClick={(e)=> setActiveItem(2)} className={`bar__item`} >
                     <button className={`bar__btn`}>
                         {icon1}
                     </button>
