@@ -1,0 +1,152 @@
+.cards{
+    padding-top: 24px;
+
+    &__header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 48px;
+    }
+
+    &__list{
+        height: 450px;
+        display: grid;
+        grid-template-columns: repeat(3,auto);
+        grid-column-gap: 28px;
+        grid-row-gap: 85px;
+        padding: 60px 0 0 0 ;
+        margin: 0;
+        list-style: none;
+        overflow-y: scroll;
+
+        &::-webkit-scrollbar {
+            width: 5px;
+          }
+          
+          /* Track */
+        &::-webkit-scrollbar-track {
+            background: #a7a6a6; 
+          }
+           
+          /* Handle */
+        &::-webkit-scrollbar-thumb {
+            background: #646060; 
+            border-radius: 10px;
+          }
+          
+    }
+
+    &__item{
+        cursor: pointer;
+        max-height: 260px;
+        position: relative;
+        padding: 115px 24px 24px 24px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 192px;
+        background: #1f1d2b;
+        border-radius: 16px;
+        transition: all 0.4s ease;
+
+        &:hover{
+            box-shadow: 6px 6px 6px #19191f;
+        }
+
+        &:active{
+            transition: all 0.1s ease;
+            box-shadow: 2px 2px 6px #19191f;
+        }
+    }
+
+    &__no-result{
+        position:absolute;
+        transform: translate(270px,150px);
+        z-index: 100;
+        color: red;
+        display: inline-block;
+        background:transparent;
+        padding: 10px;
+        border: 2px solid red;
+        border-radius: 10px;
+
+    }
+   
+    &__img--wrap{
+        position:absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%,-50px);
+        width: 130px;
+        height: 130px;
+        border-radius: 50%;
+        overflow: hidden;
+       
+    }
+
+    &__img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        animation-name: itemAnim;
+        animation-fill-mode: both;
+    }
+
+    @keyframes itemAnim {
+        0%{
+            transform: rotate(0);
+        }
+        100%{
+            transform: rotate(360deg);
+        }
+    }
+
+    &__item--title{
+        max-width: 145px;
+        text-align: center;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 130%;
+        color: #fff;
+        margin-bottom: 8px;
+    }
+    
+
+    &__price{
+        display: inline-block;
+        font-size: 14px;
+        line-height: 140%;
+        text-align: center;
+        color: #fff;
+    }
+
+    &__bowls{
+        font-size: 14px;
+        line-height: 140%;
+        text-align: center;
+        color: #abbbc2;
+        margin-bottom: 0;
+    }
+
+    &__title{
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 140%;
+        color: #fff;
+    }
+
+    &__select{
+        padding: 14px;
+        background: #1f1d2b;
+        border: 1px solid #393c49;
+        box-sizing: border-box;
+        border-radius: 8px;
+        color: #fff;
+
+        &:focus{
+            outline: none;
+        }
+    }
+}
