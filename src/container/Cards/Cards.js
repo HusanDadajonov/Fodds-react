@@ -25,7 +25,7 @@ function Cards({food,search,setcheckResult,checkResult,setSearch}){
             <div className="cards__header">
                 <h2 className="cards__title">Choose Dishes</h2>
                 <select className="cards__select">
-                    <option className="cards__option" value="1">Dine in</option>
+                    <option className="cagit config --global user.name muhammadjewel --replace-allrds__option" value="1">Dine in</option>
                     <option className="cards__option" value="2">fast food</option>
                     <option className="cards__option" value="3">easy food</option>
                 </select>
